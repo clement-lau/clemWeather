@@ -16,7 +16,7 @@ struct Plist {
     }
     var destPath:String? {
         guard sourcePath != .None else { return .None }
-        let dir = NSSearchPathForDirectoriesInDomains(.DocumentationDirectory, .UserDomainMask, true)[0]
+        let dir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
         return (dir as NSString).stringByAppendingPathComponent("\(name).plist")
     }
     init(name:String) {
@@ -24,9 +24,6 @@ struct Plist {
         let fileManager = NSFileManager.defaultManager()
         if !fileManager.fileExistsAtPath(destPath!) {
             do {
-                print ("\(sourcePath!)")
-                print ("\(destPath!)")
-                if !fileManager.fileExistsAtPath(sourcePath!) {print ("dang");}
                 try fileManager.copyItemAtPath(sourcePath!, toPath: destPath!)
             } catch let error as NSError { print ("\(error.localizedDescription)"); }
         }
@@ -37,7 +34,6 @@ struct Plist {
             guard let dict = NSMutableDictionary(contentsOfFile: destPath!) else { return .None}
             return dict
         } else {
-            print ("oh no")
             return .None
         }
     }

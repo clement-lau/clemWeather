@@ -46,6 +46,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             locationManager.requestWhenInUseAuthorization()
+        } else if CLLocationManager.authorizationStatus() == .Denied {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.locationButton.setTitle("GPS unavailable", forState: .Normal)
+                self.locationButton.hidden = false
+                self.activityIndicator.stopAnimating()
+            })
         }
         
         let dict = plist.getMutablePlistFile()!
@@ -89,7 +95,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print ("oh no: \(error.description)")
+        dispatch_async(dispatch_get_main_queue(), {
+            self.locationButton.setTitle("GPS unavailable", forState: .Normal)
+            self.locationButton.hidden = false
+            self.activityIndicator.stopAnimating()
+        })
     }
     
     //MARK: Search Controller methods
