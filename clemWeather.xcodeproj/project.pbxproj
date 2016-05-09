@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7576D94F1CDFF06E00C5A142 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7576D94E1CDFF06E00C5A142 /* data.plist */; };
+		7576D9511CDFF13A00C5A142 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576D9501CDFF13A00C5A142 /* Plist.swift */; };
+		7576D9571CE0131000C5A142 /* DayOverviewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576D9561CE0131000C5A142 /* DayOverviewTableCell.swift */; };
+		7576D9591CE047B400C5A142 /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576D9581CE047B400C5A142 /* ForecastTableViewController.swift */; };
+		757700B61CDC0E5E0003E9B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757700B51CDC0E5E0003E9B8 /* AppDelegate.swift */; };
+		757700B81CDC0E5E0003E9B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757700B71CDC0E5E0003E9B8 /* ViewController.swift */; };
+		757700BB1CDC0E5E0003E9B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757700B91CDC0E5E0003E9B8 /* Main.storyboard */; };
+		757700BE1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 757700BC1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld */; };
+		757700C01CDC0E5E0003E9B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757700BF1CDC0E5E0003E9B8 /* Assets.xcassets */; };
+		757700C31CDC0E5E0003E9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757700C11CDC0E5E0003E9B8 /* LaunchScreen.storyboard */; };
+		75796EDA1CDD2BE50068F39D /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75796ED91CDD2BE50068F39D /* WeatherRequest.swift */; };
+		75796EDC1CDD2E5F0068F39D /* WeatherRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75796EDB1CDD2E5F0068F39D /* WeatherRequestDelegate.swift */; };
+		75BD1A521CDFC6C200FCEBE3 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD1A511CDFC6C200FCEBE3 /* ViewController2.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7576D94E1CDFF06E00C5A142 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		7576D9501CDFF13A00C5A142 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		7576D9561CE0131000C5A142 /* DayOverviewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewTableCell.swift; sourceTree = "<group>"; };
+		7576D9581CE047B400C5A142 /* ForecastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
+		757700B21CDC0E5E0003E9B8 /* clemWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clemWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		757700B51CDC0E5E0003E9B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		757700B71CDC0E5E0003E9B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		757700BA1CDC0E5E0003E9B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		757700BD1CDC0E5E0003E9B8 /* clemWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = clemWeather.xcdatamodel; sourceTree = "<group>"; };
+		757700BF1CDC0E5E0003E9B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		757700C21CDC0E5E0003E9B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		757700C41CDC0E5E0003E9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75796ED91CDD2BE50068F39D /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		75796EDB1CDD2E5F0068F39D /* WeatherRequestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequestDelegate.swift; sourceTree = "<group>"; };
+		75BD1A511CDFC6C200FCEBE3 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		757700AF1CDC0E5E0003E9B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		757700A91CDC0E5E0003E9B8 = {
+			isa = PBXGroup;
+			children = (
+				757700B41CDC0E5E0003E9B8 /* clemWeather */,
+				757700B31CDC0E5E0003E9B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		757700B31CDC0E5E0003E9B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				757700B21CDC0E5E0003E9B8 /* clemWeather.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		757700B41CDC0E5E0003E9B8 /* clemWeather */ = {
+			isa = PBXGroup;
+			children = (
+				757700B51CDC0E5E0003E9B8 /* AppDelegate.swift */,
+				757700B71CDC0E5E0003E9B8 /* ViewController.swift */,
+				75BD1A511CDFC6C200FCEBE3 /* ViewController2.swift */,
+				7576D9501CDFF13A00C5A142 /* Plist.swift */,
+				757700B91CDC0E5E0003E9B8 /* Main.storyboard */,
+				7576D9581CE047B400C5A142 /* ForecastTableViewController.swift */,
+				7576D9561CE0131000C5A142 /* DayOverviewTableCell.swift */,
+				757700BF1CDC0E5E0003E9B8 /* Assets.xcassets */,
+				757700C11CDC0E5E0003E9B8 /* LaunchScreen.storyboard */,
+				757700C41CDC0E5E0003E9B8 /* Info.plist */,
+				7576D94E1CDFF06E00C5A142 /* data.plist */,
+				757700BC1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld */,
+				75796ED91CDD2BE50068F39D /* WeatherRequest.swift */,
+				75796EDB1CDD2E5F0068F39D /* WeatherRequestDelegate.swift */,
+			);
+			path = clemWeather;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		757700B11CDC0E5E0003E9B8 /* clemWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757700C71CDC0E5E0003E9B8 /* Build configuration list for PBXNativeTarget "clemWeather" */;
+			buildPhases = (
+				757700AE1CDC0E5E0003E9B8 /* Sources */,
+				757700AF1CDC0E5E0003E9B8 /* Frameworks */,
+				757700B01CDC0E5E0003E9B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = clemWeather;
+			productName = clemWeather;
+			productReference = 757700B21CDC0E5E0003E9B8 /* clemWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		757700AA1CDC0E5E0003E9B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "clem co";
+				TargetAttributes = {
+					757700B11CDC0E5E0003E9B8 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 757700AD1CDC0E5E0003E9B8 /* Build configuration list for PBXProject "clemWeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 757700A91CDC0E5E0003E9B8;
+			productRefGroup = 757700B31CDC0E5E0003E9B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				757700B11CDC0E5E0003E9B8 /* clemWeather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		757700B01CDC0E5E0003E9B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757700C31CDC0E5E0003E9B8 /* LaunchScreen.storyboard in Resources */,
+				757700C01CDC0E5E0003E9B8 /* Assets.xcassets in Resources */,
+				7576D94F1CDFF06E00C5A142 /* data.plist in Resources */,
+				757700BB1CDC0E5E0003E9B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		757700AE1CDC0E5E0003E9B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7576D9511CDFF13A00C5A142 /* Plist.swift in Sources */,
+				75796EDA1CDD2BE50068F39D /* WeatherRequest.swift in Sources */,
+				7576D9571CE0131000C5A142 /* DayOverviewTableCell.swift in Sources */,
+				7576D9591CE047B400C5A142 /* ForecastTableViewController.swift in Sources */,
+				757700BE1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld in Sources */,
+				757700B81CDC0E5E0003E9B8 /* ViewController.swift in Sources */,
+				757700B61CDC0E5E0003E9B8 /* AppDelegate.swift in Sources */,
+				75796EDC1CDD2E5F0068F39D /* WeatherRequestDelegate.swift in Sources */,
+				75BD1A521CDFC6C200FCEBE3 /* ViewController2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		757700B91CDC0E5E0003E9B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757700BA1CDC0E5E0003E9B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		757700C11CDC0E5E0003E9B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757700C21CDC0E5E0003E9B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		757700C51CDC0E5E0003E9B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		757700C61CDC0E5E0003E9B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		757700C81CDC0E5E0003E9B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = clemWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clem.clemWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		757700C91CDC0E5E0003E9B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = clemWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clem.clemWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		757700AD1CDC0E5E0003E9B8 /* Build configuration list for PBXProject "clemWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757700C51CDC0E5E0003E9B8 /* Debug */,
+				757700C61CDC0E5E0003E9B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757700C71CDC0E5E0003E9B8 /* Build configuration list for PBXNativeTarget "clemWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757700C81CDC0E5E0003E9B8 /* Debug */,
+				757700C91CDC0E5E0003E9B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		757700BC1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				757700BD1CDC0E5E0003E9B8 /* clemWeather.xcdatamodel */,
+			);
+			currentVersion = 757700BD1CDC0E5E0003E9B8 /* clemWeather.xcdatamodel */;
+			path = clemWeather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 757700AA1CDC0E5E0003E9B8 /* Project object */;
+}
