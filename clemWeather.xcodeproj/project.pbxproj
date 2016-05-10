@@ -19,6 +19,7 @@
 		757700C31CDC0E5E0003E9B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757700C11CDC0E5E0003E9B8 /* LaunchScreen.storyboard */; };
 		75796EDA1CDD2BE50068F39D /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75796ED91CDD2BE50068F39D /* WeatherRequest.swift */; };
 		75796EDC1CDD2E5F0068F39D /* WeatherRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75796EDB1CDD2E5F0068F39D /* WeatherRequestDelegate.swift */; };
+		75BBA5851CE13FB300784495 /* UIOutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BBA5841CE13FB300784495 /* UIOutlinedLabel.swift */; };
 		75BD1A521CDFC6C200FCEBE3 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BD1A511CDFC6C200FCEBE3 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		757700C41CDC0E5E0003E9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75796ED91CDD2BE50068F39D /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		75796EDB1CDD2E5F0068F39D /* WeatherRequestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequestDelegate.swift; sourceTree = "<group>"; };
+		75BBA5841CE13FB300784495 /* UIOutlinedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIOutlinedLabel.swift; sourceTree = "<group>"; };
 		75BD1A511CDFC6C200FCEBE3 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				757700BC1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld */,
 				75796ED91CDD2BE50068F39D /* WeatherRequest.swift */,
 				75796EDB1CDD2E5F0068F39D /* WeatherRequestDelegate.swift */,
+				75BBA5841CE13FB300784495 /* UIOutlinedLabel.swift */,
 			);
 			path = clemWeather;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				75796EDA1CDD2BE50068F39D /* WeatherRequest.swift in Sources */,
 				7576D9571CE0131000C5A142 /* DayOverviewTableCell.swift in Sources */,
 				7576D9591CE047B400C5A142 /* ForecastTableViewController.swift in Sources */,
+				75BBA5851CE13FB300784495 /* UIOutlinedLabel.swift in Sources */,
 				757700BE1CDC0E5E0003E9B8 /* clemWeather.xcdatamodeld in Sources */,
 				757700B81CDC0E5E0003E9B8 /* ViewController.swift in Sources */,
 				757700B61CDC0E5E0003E9B8 /* AppDelegate.swift in Sources */,

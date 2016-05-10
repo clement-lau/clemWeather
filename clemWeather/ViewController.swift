@@ -20,6 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var precipLabel: UILabel!
     @IBOutlet weak var unitButton: UIButton!
+    @IBOutlet weak var currentWeatherStack: UIStackView!
     @IBOutlet weak var forecastTableView: UITableView!
     
     let locationManager = CLLocationManager()
@@ -43,13 +44,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         
         activityIndicator.startAnimating()
         
+        self.weatherIcon.layer.borderColor = UIColor.blackColor().CGColor
+        self.weatherIcon.layer.borderWidth = 2
+        self.weatherIcon.layer.cornerRadius = 5.0
+        
         locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             locationManager.requestWhenInUseAuthorization()
         } else if CLLocationManager.authorizationStatus() == .Denied {
             dispatch_async(dispatch_get_main_queue(), {
                 self.locationButton.setTitle("GPS unavailable", forState: .Normal)
-                self.locationButton.hidden = false
                 self.activityIndicator.stopAnimating()
             })
         }
@@ -97,7 +101,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         dispatch_async(dispatch_get_main_queue(), {
             self.locationButton.setTitle("GPS unavailable", forState: .Normal)
-            self.locationButton.hidden = false
+            self.currentWeatherStack.hidden = false
             self.activityIndicator.stopAnimating()
         })
     }
@@ -125,7 +129,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         }
         let weatherDesc = d["weatherDesc"]![0]["value"] as! String
         let iconUrl = d["weatherIconUrl"]![0]["value"] as! String
-        let precip = "Precipitation: " + (d["precipMM"] as! String) + " mm"
+        let precip = "Precip: " + (d["precipMM"] as! String) + " mm"
         
         let url = NSURL(string: iconUrl)
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
@@ -145,10 +149,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
             self.descriptionLabel.text = weatherDesc
             self.precipLabel.text = precip
             
+            self.currentWeatherStack.hidden = false
             self.locationButton.hidden = false
-            self.temperatureLabel.hidden = false
-            self.descriptionLabel.hidden = false
-            self.precipLabel.hidden = false
+//            self.temperatureLabel.hidden = false
+//            self.descriptionLabel.hidden = false
+//            self.precipLabel.hidden = false
             self.unitButton.hidden = false
         })
     }
@@ -196,9 +201,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
         forecast = !forecast
         if forecast {
             forecastTableView.hidden = false
+            currentWeatherStack.hidden = true
             forecastTableView.reloadData()
         } else {
+            currentWeatherStack.hidden = false
             forecastTableView.hidden = true
+            
         }
     }
     

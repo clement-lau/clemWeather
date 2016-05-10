@@ -21,6 +21,7 @@ class ViewController2: UIViewController, WeatherRequestDelegate, UINavigationBar
     @IBOutlet weak var precipLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var unitButton: UIButton!
+    @IBOutlet weak var currentWeatherStack: UIStackView!
     @IBOutlet weak var forecastTableView: UITableView!
     
     var searchText: String!
@@ -46,6 +47,10 @@ class ViewController2: UIViewController, WeatherRequestDelegate, UINavigationBar
         WeatherRequest.requestWithSource(self, location: searchText)
         
         activityIndicator.startAnimating()
+        
+        self.weatherIcon.layer.borderColor = UIColor.blackColor().CGColor
+        self.weatherIcon.layer.borderWidth = 2
+        self.weatherIcon.layer.cornerRadius = 5.0
         
         let dict = plist.getMutablePlistFile()!
         
@@ -102,7 +107,7 @@ class ViewController2: UIViewController, WeatherRequestDelegate, UINavigationBar
         }
         let weatherDesc = d["weatherDesc"]![0]["value"] as! String
         let iconUrl = d["weatherIconUrl"]![0]["value"] as! String
-        let precip = "Precipitation: " + (d["precipMM"] as! String) + " mm"
+        let precip = "Precip: " + (d["precipMM"] as! String) + " mm"
         
         let url = NSURL(string: iconUrl)
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
@@ -122,10 +127,11 @@ class ViewController2: UIViewController, WeatherRequestDelegate, UINavigationBar
             self.descriptionLabel.text = weatherDesc
             self.precipLabel.text = precip
             
+            self.currentWeatherStack.hidden = false
             self.locationButton.hidden = false
-            self.temperatureLabel.hidden = false
-            self.descriptionLabel.hidden = false
-            self.precipLabel.hidden = false
+//            self.temperatureLabel.hidden = false
+//            self.descriptionLabel.hidden = false
+//            self.precipLabel.hidden = false
             self.unitButton.hidden = false
         })
     }
@@ -177,8 +183,10 @@ class ViewController2: UIViewController, WeatherRequestDelegate, UINavigationBar
         forecast = !forecast
         if forecast {
             forecastTableView.hidden = false
+            currentWeatherStack.hidden = true
             forecastTableView.reloadData()
         } else {
+            currentWeatherStack.hidden = false
             forecastTableView.hidden = true
         }
     }
